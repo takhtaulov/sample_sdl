@@ -16,8 +16,8 @@
 #define RECT_SPEED       400
 
 #define FREQUENCY      44100
-#define CHUNKSIZE      2048
-#define LOOPS          5
+#define CHUNKSIZE       2048
+#define LOOPS              5
 
 int main(int argc, char *argv[])
 {
@@ -146,7 +146,6 @@ int main(int argc, char *argv[])
 
         SDL_RenderClear(renderer);
         SDL_RenderCopy(renderer, texture, NULL, &rect);
-
         SDL_RenderPresent(renderer);
 
         Uint32 middle = (WINDOW_WIDTH + WINDOW_HEIGHT) / 2;
@@ -154,9 +153,7 @@ int main(int argc, char *argv[])
     }
 
     SDL_DestroyTexture(texture);
-
     SDL_DestroyRenderer(renderer);
-
     SDL_DestroyWindow(window);
 
     SDL_Quit();
